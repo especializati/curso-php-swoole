@@ -5,7 +5,8 @@ RUN apk add --no-cache \
     git \
     build-base \
     autoconf \
-    libzip-dev
+    libzip-dev \
+    inotify-tools
 
 RUN docker-php-ext-install zip pdo_mysql
 RUN pecl install swoole-5.1.2 && docker-php-ext-enable swoole
